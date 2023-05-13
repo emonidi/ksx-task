@@ -1,0 +1,13 @@
+.task-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-icon{
+    cursor: pointer;
+}
+
+.task.done{
+    text-decoration: line-through;
+}

@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.error-text{
+    color: red;
+}
+
+.button-container{
+    align-items: center;
+}

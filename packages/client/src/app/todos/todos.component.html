@@ -1,0 +1,37 @@
+<div>
+    <div>
+        <div>
+            <app-task-input (onCreate)="onTaskCreate($event)" />
+        </div>
+        <div>
+            <div>
+                <div *ngIf="taskService.isLoading" class="spinner">
+                    <div>
+                        <nx-spinner nxSize="large"></nx-spinner>
+                    </div>
+                </div>
+                <div nxLayout="grid" *ngIf="!taskService.isLoading && !taskService.error && taskService.tasks.length > 0" >
+                    <div nxRow>
+                        <div nxCol="12,8" nxColOffset="2">
+                            <nx-card class="task-list">
+                                <app-task [task]="task" *ngFor="let task of taskService.tasks" (onDelete)="onTaskDelete($event)" (onChange)="onTaskChange($event)"/>
+                            </nx-card>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="!taskService.isLoading && taskService.error" >
+                    <nx-message class="nx-margin-top-m" nxContext="error">
+                        <span class="nx-font-weight-bold">Ooops:</span><br />
+                        <p>
+                            Something went terribly wrong. This is probably the developer's fault.
+                        </p>
+                        <p>
+                            On the bright side.... Hey you don't have to work on your tasks today!
+                        </p>
+                    </nx-message>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

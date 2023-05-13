@@ -1,0 +1,36 @@
+header{
+    height: auto !important;
+    border:none !important;
+    padding: 1rem 0 !important;
+    border-bottom:solid 1px #fff !important;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo svg{
+    width: 60px;
+    height: 60px;
+   
+}
+
+.logo .logo-text{
+    margin-left: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between !important;
+}
+
+
+.project-title{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: larger;
+}

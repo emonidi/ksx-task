@@ -1,0 +1,7 @@
+<div class="task-container">
+    <nx-checkbox class="nx-margin-bottom-s task" [ngClass]="{'done': task.done}" [checked]="task.done"
+        (checkedChange)="toggleDone()">
+        {{task.message}}
+    </nx-checkbox>
+    <nx-icon (click)="deleteTask()" class="task-icon" name="trash-o" size="s"></nx-icon>
+</div>

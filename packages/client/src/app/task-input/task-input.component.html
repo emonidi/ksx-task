@@ -1,0 +1,15 @@
+<div nxLayout="grid" class="nx-margin-top-xl nx-margin-bottom-s" >
+   <div nxRow class="container justify-content-start">
+    <div  nxCol="6" nxColOffset="2">
+        <nx-formfield  nxLabel="Add your task here...">
+            <input [value]="task.message" (keyup)="onInputChange($event)" nxInput type="text"/>
+            <span nxFormfieldHint class="error-text">
+                {{error}}
+            </span>
+        </nx-formfield>
+    </div>
+    <div nxCol="2">
+        <button (click)="onTaskSubmit()" nxButton="small">OK</button>
+    </div>
+   </div>
+</div>
